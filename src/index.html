@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/src/css/style.css" />
+        <script src="/src/modules/create-user.ts" type="module" defer></script>
+
+        <title>Funplanet</title>
+    </head>
+
+    <body>
+        <h1>Welcome to Funplanet</h1>
+        
+        <button id="show-members">Show Members</button>
+        <div id="visited-user-info" style="display: none">
+            <h3>Besökta användarens inlägg:</h3>
+            <h2 id="visited-user-name"></h2>
+            <div id="allPostsFromClickedUser"></div>
+            <img id="visited-user-picture" src="/src/images/deafultwoman.jpg" alt="Profile picture" width="100" height="100" />
+            <div id="postsFromOfflineUsers"></div>
+            <!-- <div id="visited-user-posts"></div> -->
+        </div>
+
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required />
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+
+            <div id="images">
+                <label>Choose Avatar:</label>
+                <label for="img1">
+                    <img src="/src/images/defaultman.jpg" alt="Bild 1" class="img-resize" />
+                </label>
+                <input type="radio" name="image" value="img1" id="img1" />
+
+                <label for="img2">
+                    <img src="/src/images/deafultwoman.jpg" alt="Bild 2" class="img-resize" />
+                </label>
+                <input type="radio" id="img2" name="image" value="img2" />
+
+                <label for="img3">
+                    <img src="/src/images/defaultrandom.jpg" alt="Bild 3" class="img-resize" />
+                </label>
+                <input type="radio" id="img3" name="image" value="img3" />
+            </div>
+
+            <button type="submit" id="login">Login</button>
+            <button type="submit" id="createuser">Create User</button>
+        </form>
+
+        <div id="user-section" style="display: none">
+            <h2 id="welcome-message"></h2>
+
+            <div id="userInfoDiv"></div>
+
+            <h3>Post a status update:</h3>
+            <input type="text" id="status-update" />
+            <button id="submit-status">Post</button>
+
+            <div id="user-posts">
+                <!-- User posts will be displayed here -->
+            </div>
+            <button id="logout">log out</button>
+            <button id="remove">Remove this acc</button>
+        </div>
+
+        <div>
+            
+            <div id="user-list" class="fade-in-text" style="display: none">
+                <h3 id="h33">Medlemmar</h3>
+                <ul id="users">
+                    <!-- Användarnas namn kommer att visas här -->
+                </ul>
+            </div>
+        </div>
+        
+    </body>
+</html>
